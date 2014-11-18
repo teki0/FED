@@ -1,0 +1,321 @@
+
+}
+#links{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#rechts{
+	display: flex;
+	flex-wrap: wrap;
+}
+/* MOBILE FIRST */
+
+body {
+	padding: 0.3em;
+	margin: 0;
+	line-height: 1.3em;
+	font-family: Tohama,Geneva,sans-serif;
+	background-color: #D4CFCC;
+}
+
+header input, footer input {
+	display: block;
+	width: 100%;
+	font-size: 1.3em; 
+	padding-left: 0.4em;
+	box-sizing: border-box;
+	border: solid black;
+
+}
+
+/* >>>>>HEADER<<<<< */
+
+body > header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 1px;
+	overflow: hidden;
+	background-color: DodgerBlue;
+	padding: 0.3em;
+	margin: 0 auto;
+}
+body > header > h1, 
+body > header > a{
+	display: none;
+}
+body > header > *{
+	display: inline-block;
+  	margin: 0 auto;
+}
+nav ul {
+	list-style-type: none;
+	margin-top: 1.5em;
+}
+
+nav li {
+	display: inline-block;
+	border-style: solid;
+	padding: 0 0.3em;
+	margin-bottom: 0.3em;
+	transition: 0.2s;
+}
+nav a{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	margin: 0.1em;
+ 
+}
+body > header > nav li:hover {
+	border-style: solid;
+	border-color: white;
+	background-color: black;
+	color: white;
+}
+section > img {
+	width: 5em;
+}
+
+body > header> form{
+	margin-top: 1.5em;
+}
+/* >>>>>MAINSHIZ<<<<< */
+
+main {
+	background-color: rgba(255,255,255,0.7);
+	padding: 0.2em;
+	float: left;
+
+}
+
+main > article > h2 {
+	border-style: solid;
+	border-color: white;
+	background-color: DodgerBlue;
+	color: black;
+	padding: 0.2em;
+	transition: 0.5s;
+}
+
+article > img {
+	width: 100%;
+}
+
+/* >>>>SECTIONS&ARTICLES<<<<<*/
+
+#links section {
+	padding: 0.2em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+	background-color: rgba(255,255,255,0.7);
+
+}
+#rechts section {
+	padding: 0.2em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+	background-color: rgba(255,255,255,0.7);
+}
+#links section article{
+	margin-bottom: 1em;
+	padding: 0.3em;
+	border: solid;
+}
+
+#links section  article  header  h1 {
+	border-style: none;
+	background-color: DodgerBlue;
+	color: black;
+	padding: 0.2em;
+	margin-left: 0;
+}
+#rechts section article{
+	margin-bottom: 1em;
+	padding: 0.3em;
+	border: solid;
+}
+
+#rechts section  article  header  h1 {
+	border-style: none;
+	background-color: DodgerBlue;
+	color: black;
+	padding: 0.2em;
+	margin-left: 0;
+}
+blockquote {
+	font-style: italic;
+}
+
+/* >>>>> ASIDE <<<<< */
+
+aside {
+	background-color: rgba(255,255,255,0.7);
+	margin-top: 1em;
+	padding: 0.2em;
+}
+
+aside > h1 {
+	padding: 0.2em;
+}
+
+aside > h1 > a {
+	color: white;
+}
+aside > section{
+	border-style: solid;
+	margin-bottom: 0.3em;
+}
+
+aside > section > h1 {
+	background-color: white;
+	color: black;
+	padding: 0.2em;
+}
+
+section > h1 + h1 {
+	background-color: grey;
+	opacity: 0.5;
+	color: black;
+	font-size: 1em;
+}
+
+/* >>>>> FOOTER <<<<< */
+body > footer {
+	margin-top: 1em;
+	color: rgb(65,65,65);
+	padding: 0.2em;
+}
+body > footer {
+background: rgb(219, 219, 219);
+margin-top: 6rem;
+padding: 0.6rem;
+color:grey;
+}
+
+body > footer > h1 {
+	font-size: 1.1em;
+}
+
+footer input {
+	margin-bottom: 0.2em;
+}
+
+footer input[type=submit] {
+	background-color: white;
+	font-weight: bold;
+}
+
+footer input[type=submit]:hover {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+#links > footer > ul{
+	display: none;
+}
+
+/*>>>>> TABLET VIEW <<<<<*/
+@media (min-width: 30em){
+ 	body{
+		background-color: #D4CFCC;
+	 	max-width: 43em;
+     	margin: 0 auto;
+ 	}
+
+	footer{
+		background-color: white;
+		margin-bottom: 1em;
+}
+
+/*>>>>> DESKTOP VIEW <<<<<*/
+@media (min-width: 75em){
+ 	body{
+  		background-color: #D4CFCC;
+  		max-width: 80em;
+  	}
+  	img{
+  		max-width: 43em;
+  		margin: 0 auto;
+  	}
+  	/* ==== MAIN ==== */
+	#links {
+		float: left;
+		width: 68%;
+	}
+	body> header{
+		display: flex;
+		align-items: center;
+		height: 12em;
+	}
+	main{
+		max-height: 133em;
+		margin-top: 1em;
+		float: left;
+	}
+
+	body > #rechts {
+		width: 30%;
+	}
+
+
+	/* ==== 3 PROJECTEN & ASIDE ==== */
+	#rechts{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		width: 28em;
+		width: 40%;
+/*		margin-top: -129.5em;*/
+		margin-left: 2em;
+	}
+
+/* ==== FOOTER ==== */
+
+	footer{
+		background-color: white;
+		clear: both;
+	}
+	footer > ul {
+		display: flex;
+		justify-content: space-around;
+		-webkit-flex-flow: row wrap;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	footer > ul > section {
+		width: 15em;
+		height: 100%;
+		padding-bottom: 1em;
+	}
+
+	footer > ul > section > ul {
+		padding: 0;
+	}
+
+	footer > ul > section > ul > li {
+		margin-left: 1em;
+	}
+	footer input {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 1.3em;
+	}
+	#links > footer > ul{
+	display: flex;
+}
+	body > #links> footer > ul > section {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 12em;
+	height: 100%;
+	padding-bottom: 1em;
+}*/
+}

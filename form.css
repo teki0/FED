@@ -9,7 +9,9 @@
 a[href$='.pdf'] {
 	font-size: 1.5em;
 }
-
+section{
+	overflow: hidden;
+}
 a[href$='.pdf']::before {
 	content: url(http://www.adobe.com/images/shared/product_mnemonics/50x50/acrobat_reader_50x50.gif);
 	display: inline-block;
@@ -25,11 +27,12 @@ a[data-size]::after {
 }
 
 fieldset{
-	box-shadow: 0.4em 0.4em 1em -0.1em black;
+	width: 90%;
 	margin-bottom: 1em;
+/*	border: none;*/
 }
 
-body {
+body, main {
 	padding: 0.3em;
 	margin: 0;
 	line-height: 1.3em;
@@ -46,13 +49,27 @@ header input, footer input {
 	border: solid black;
 
 }
-input {
+input, textarea {
 	transition: 1s;
+	display: block;
+	width: 100%;
+	font-size: 1.3em;
+	padding-left: 0.4em;
+	box-sizing: border-box;
+	border-radius: 0.5em;
 }
 body{
 	background-color: #D4CFCC;
 	font-size: 100%;
 
+}
+
+.zichtbaar {
+	display: block !important;
+}
+
+fieldset:nth-of-type(4),:nth-of-type(3){
+	display: none;
 }
 
 /* >>>>>HEADER<<<<< */
@@ -109,7 +126,13 @@ body > header> form{
 	margin-top: 1.5em;
 }
 /* >>>>>MAINSHIZ<<<<< */
-
+main{
+	margin-bottom: 2%;
+	background-color: white;
+	margin-top: 1em;
+	padding: 0.2em;
+	border-radius: 0.5em;
+}
 article {
 	display: flex;
 	flex-direction: column; 
@@ -119,7 +142,7 @@ article {
 	left: 0;
 	background-color: lightblue;
 	margin: 1em;
-	border-radius: 2em;
+	border-radius: 0.5em;
 	transition: 1s;
 }
 
@@ -133,29 +156,14 @@ article > footer {
 }
 
 footer {
-	border-radius: 0 0 2em 2em;
+	border-radius: 0 0 0.5em 0.5em;
 /* 	Topleft, topright, botright, botleft */
-}
-
-h1,
-h2,
-h3,
-h4 {
-	text-shadow: 2px 2px 1px white;	
-	/*<offset-x> <offset-y> <blur-radius> <color>*/
-}
-
-.ontzichtbaar {
-	display: none;
-}
-.zichtbaar {
-	display: block;
 }
 
 /* ==== 3 PROJECTEN ==== */
 section {
 	background-color: white;
-	border-radius: 1em;
+	border-radius: 0.5em;
 	border-bottom-right-radius: 1em;
 }
 
@@ -202,7 +210,7 @@ aside {
 	background-color: white;
 	margin-top: 1em;
 	padding: 0.2em;
-	border-radius: 1em;
+	border-radius: 0.5em;
 }
 
 aside > h1 {
@@ -227,15 +235,9 @@ aside > section > h1 + h1 {
 }
 
 body > footer {
-	margin-top: 1em;
+	margin-top: 2em;
 	color: rgb(65,65,65);
 	padding: 0.2em;
-}
-body > footer {
-background: rgb(219, 219, 219);
-margin-top: 6rem;
-padding: 0.6rem;
-color:grey;
 }
 
 body > footer > h1 {
@@ -280,6 +282,10 @@ padding: 0;
 #links >footer > ul > section > ul > li {
 margin-left: 1em;
 }
+
+#links > footer > ul{
+	display: none;
+}
 /* ////////////////////TABLET VIEW\\\\\\\\\\\\\\\\\\*/ 
 @media (min-width: 30em){
 	
@@ -298,14 +304,7 @@ margin-left: 1em;
 		justify-content: space-around;
 		align-items: center;
 	}
-/*
-	body > header > h1 {
-		display: initial;
-		color: white;
-		text-shadow: 0.2em -0.2em 0.1em black;
-		font-size: 1.2em;
-	}*/
-	
+
 	/* ==== FOOTER ==== */
 	footer input {
 		width: 35%;
@@ -354,17 +353,19 @@ margin-left: 1em;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		max-width: 45em;
+		width: 58%;
 		margin-right: 3em;
 		padding: 0.2em;
 		float: left;
 		order:3;
+		background-color: white;
+		border-radius: 0.5em;
 	}
 
 	/* ==== FOOTER ==== */
 
 	footer{
-		background-color: white;
+		background-color: lightgrey;
 		clear: both;
 	}
 	footer > ul {
@@ -379,8 +380,11 @@ margin-left: 1em;
 		width: 15em;
 		height: 100%;
 		padding-bottom: 1em;
+		background-color: lightgrey;
 	}
-
+	footer > section{
+		background-color: lightgrey;
+	}
 	footer > ul > section > ul {
 		padding: 0;
 	}
